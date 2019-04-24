@@ -8,11 +8,15 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ListModuleModule } from 'src/app/components/list-module/list-module.module';
 import { HeaderComponent } from './components/header/header.component';
+import { PhotosComponent } from './components/photos/photos.component';
+import { PhotoItemComponent } from './components/photo-item/photo-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    PhotosComponent,
+    PhotoItemComponent
   ],
   imports: [
     BrowserModule,

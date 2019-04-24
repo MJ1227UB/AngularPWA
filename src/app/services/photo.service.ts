@@ -8,13 +8,12 @@ import { Observable } from 'rxjs';
 })
 export class PhotoService {
   photosUrl = 'https://jsonplaceholder.typicode.com/photos';
-  limit = '?_limit=6';
+  limit = '?_limit=9';
 
   constructor(private http: HttpClient) { }
 
   getPhotos(): Observable<Photo[]> {
     const fetcPhotos = this.http.get<Photo[]>(`${this.photosUrl}${this.limit}`);
-    console.log('fetchPhotos: ', fetcPhotos.subscribe());
     return fetcPhotos;
   }
 }
