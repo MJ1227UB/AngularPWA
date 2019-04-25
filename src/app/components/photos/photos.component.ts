@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Photo } from '../../models/Photo.model';
 import { PhotoService } from '../../services/photo.service';
-import { from } from 'rxjs';
 
 @Component({
   selector: 'app-photos',
@@ -17,8 +16,11 @@ export class PhotosComponent implements OnInit {
   ngOnInit() {
     this.photoService.getPhotos().subscribe((photos) => {
       this.photos = photos;
-      console.log(this.photos);
     });
+  }
+
+  ngOnDestroy() {
+
   }
 
 }
