@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Photo } from '../models/Photo.model';
 import { Observable } from 'rxjs';
 
@@ -13,7 +13,6 @@ export class PhotoService {
   constructor(private http: HttpClient) { }
 
   getPhotos(): Observable<Photo[]> {
-    const fetcPhotos = this.http.get<Photo[]>(`${this.photosUrl}${this.limit}`);
-    return fetcPhotos;
+    return this.http.get<Photo[]>(`${this.photosUrl}${this.limit}`);
   }
 }

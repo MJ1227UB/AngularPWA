@@ -6,14 +6,7 @@ import { Photo } from '../../models/Photo.model';
   templateUrl: './photo-item.component.html',
   styleUrls: ['./photo-item.component.scss']
 })
-export class PhotoItemComponent implements OnInit {
+export class PhotoItemComponent {
   @Input() photo: Photo;
-
-  photoUrl: string = `https://loremflickr.com/300/200/`;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

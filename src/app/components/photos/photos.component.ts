@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Photo } from '../../models/Photo.model';
 import { PhotoService } from '../../services/photo.service';
 
@@ -17,10 +17,6 @@ export class PhotosComponent implements OnInit {
     this.photoService.getPhotos().subscribe((photos) => {
       this.photos = photos;
     });
-  }
-
-  ngOnDestroy() {
-
   }
 
 }
