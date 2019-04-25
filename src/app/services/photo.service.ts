@@ -15,4 +15,6 @@ export class PhotoService {
   getPhotos(): Observable<Photo[]> {
     return this.http.get<Photo[]>(`${this.photosUrl}${this.limit}`);
   }
+
+  postPhoto() { }
 }

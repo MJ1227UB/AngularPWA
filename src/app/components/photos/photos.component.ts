@@ -17,6 +17,8 @@ export class PhotosComponent implements OnInit {
     this.photoService.getPhotos().subscribe((photos) => {
       this.photos = photos;
     });
+
+    this.photoService.postPhoto();
   }
 
 }

@@ -4,12 +4,12 @@
     {
       "name": "cache-api",
       "urls": [
-        "/**"
+        "https://jsonplaceholder.typicode.com/**"
       ],
       "cacheConfig": {
         "strategy": "freshness",
         "maxSize": 100,
-        "maxAge": "20s",
+        "maxAge": "1d",
         "timeout": "10s"
       }
     }
